@@ -18,6 +18,7 @@ int main(int argc, char **argv) {
 	startTime=omp_get_wtime();
 	int n, m, a, b;
 	FILE *inFile = fopen(argv[1], "r");
+	if (argv[3]=="dontuse")
 	FILE *outFile = fopen(argv[2], "w");
 	fscanf(inFile, "%d%d%d%d", &m, &n, &a, &b);
 	int **A = (int **) malloc(m * sizeof(int *));
